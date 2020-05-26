@@ -1,0 +1,58 @@
+<?php
+/**
+ * Copyright © 2015 isobarcommerce. All rights reserved.
+ */
+?>
+<?php
+/**
+ * {{controller}} {{action}} template
+ *
+ * @var $block \Isobar\FrontendPage\Block\OfferPage\Index
+ */
+
+
+echo $block->hello;
+?>
+<?php
+/* @var Codilar\HelloWorld\Block\Hello $block */
+?>
+<br/>
+update content from FrontendPage\view\frontend\templates\offerpage\index.phtml
+
+
+<div data-bind="scope: 'knockout-tutorial'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "knockout-tutorial": {
+                        "component": "Isobar_FrontendPage/js/viewModel",
+                        "template" : "Isobar_FrontendPage/template"
+                    }
+                }
+            }
+        }
+    }
+</script>
+
+    <?php $jsonProductData = $block->getProductCollectinJsonData(); ?>
+<script type="text/x-magento-init">
+{
+    "*": {
+        "Magento_Ui/js/core/app": {
+            "components": {
+                "example-scope": {
+                    "component": "Isobar_FrontendPage/js/productrender",
+                    "items": <?php echo $jsonProductData; ?>
+                }
+            }
+        }
+    }
+}
+</script>
+<div data-bind="scope: 'example-scope'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>

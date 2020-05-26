@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Isobar. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Backend/etc/menu.xsd">
+    <menu>
+        <add id="Isobar_DiscountPackage::isobar_discountgrid_index" title="Discount" module="Isobar_DiscountPackage"  sortOrder="20" dependsOnModule="Isobar_DiscountPackage" action="discountpackage/discountgrid/index" resource="Isobar_DiscountPackage::isobar_discountgrid_index"/>
+<!--AddMenu-->
+    </menu>
+</config>
